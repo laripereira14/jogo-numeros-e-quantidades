@@ -1,0 +1,120 @@
+.btn {
+    background-image: linear-gradient(to right, #FED811, #ffd000);
+    box-shadow: 0px 6px 0px #ffc507;
+    border-radius: 1.5rem;
+    text-shadow: 2px 2px #ffc507;
+    padding: 1.5rem 2rem;
+    border: none;
+    outline: none;
+    width: max-content;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+
+    &:active{
+        box-shadow: 0px 2px 0px #ffc507;
+        position: relative;
+        top: 4%;
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    background-color: #EF424E;
+    border: 1rem solid white;
+    border-radius: 1.5rem;
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 3px rgba(20, 20, 20, 0.25), 0 3px rgba(73, 72, 72, 0.08);
+    
+    &--number {
+        cursor: pointer;
+        margin: 0 1rem;
+        
+        @media (min-width: 320px) and (max-width: 768px) { margin: 0 .5rem; }
+
+        &:hover { animation: pulse .7s infinite; }
+    }
+
+    &--timer { 
+        animation: pulse .9s infinite; 
+        @media (min-width: 1024px) and (max-width: 1440px) { 
+            width: 8rem;
+            height: 8rem; 
+            font-size: 3rem;
+        }
+    }
+}
+
+.banner {
+    width: max-content;
+    position: relative;
+    background: #13ADB7;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: 1rem;
+
+    @media (min-width: 320px) and (max-width: 480px) { width: 92%; }
+    @media (min-width: 768px) and (max-width: 1440px) { font-size: 3rem;}
+
+    &__container { position: relative; z-index: 1; }
+   
+    &:before, &:after { 
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -1rem;
+        border: 1.5rem solid #128e97;
+        z-index: -1;
+
+        @media (min-width: 768px) and (max-width: 1440px) {  border: 2rem solid #128e97; }
+    }
+
+    &:before {
+        left: -3rem;
+        border-right-width: 2.5rem;
+        border-left-color: transparent;
+
+        @media (min-width: 768px) and (max-width: 1440px) {  left: -3.5rem; }
+    }
+
+    &:after {
+        right: -3rem;
+        border-left-width: 2.5rem;
+        border-right-color: transparent;
+
+        @media (min-width: 768px) and (max-width: 1440px) {  right: -3.5rem; }
+    }
+
+    &__content { text-shadow: 2px 2px #159ea8; }
+
+    .banner__content:before, .banner__content:after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-style: solid;
+        border-color: #146B7F transparent transparent transparent;
+        bottom: -1rem;
+   }
+
+   .banner__content:before {
+        left: 0;
+        border-width: 1rem 0 0 1rem;
+   }
+
+   .banner__content:after {
+        right: 0;
+        border-width: 1rem 1rem 0 0;
+   }
+
+}

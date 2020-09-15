@@ -1,0 +1,117 @@
+.quantos-tem {
+    &__container {
+        position: relative;
+        overflow: hidden;
+        background: url('../assets/QuantosTem/bg.png') no-repeat center;
+        background-size: cover;
+        border-radius: 3.5rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;       
+    }    
+
+    &__numbers-container {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    &__img-container {
+        z-index: 1;
+        width: 75%;
+        height: 45%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            flex-direction: column; 
+            height: 64%;
+        }
+                     
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 10;
+        width: 35%;
+        height: auto;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            width: 75%;
+        }
+        
+    }
+}
+
+.ml {
+    @media (min-width: 320px) and (max-width: 480px) {
+        margin-left: -5rem;
+    }   
+}
+
+.image { 
+    height: auto;
+    margin: 0 1.5rem;
+
+    &:nth-last-child(n+1):nth-last-child(-n+10):first-child, 
+    &:nth-last-child(n+1):nth-last-child(-n+10):first-child ~ & { 
+        max-width: 12%; 
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            max-width: 29%; 
+        }
+
+    }
+
+    &:nth-last-child(n+11):nth-last-child(-n+18):first-child, 
+    &:nth-last-child(n+11):nth-last-child(-n+18):first-child ~ & { 
+        max-width: 10%;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            max-width: 22%;
+        }
+
+    }
+
+    &:nth-last-child(n+19):nth-last-child(-n+30):first-child, 
+    &:nth-last-child(n+19):nth-last-child(-n+30):first-child ~ & { 
+        max-width: 7%;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            max-width: 19%;
+        }
+
+    }
+}
+
+
+.cloud {
+    position: absolute;
+    height: auto;
+    &-1 {
+        width: 25rem;
+        top: 9rem;
+        left: 75rem;  
+        animation: moveclouds-1 30s linear infinite both;  
+        @media (min-width: 320px) and (max-width: 480px) { top: 19rem; }
+    } 
+
+    &-2 {
+        max-width: 20rem;
+        top: 5rem;
+        left: 18rem;     
+        animation: moveclouds-2 30s linear infinite both;
+    } 
+    
+    &-3 {
+        max-width: 20rem;
+        top: 12rem;
+        left: 10rem; 
+        animation: moveclouds-3 30s linear infinite both;    
+    } 
+}
