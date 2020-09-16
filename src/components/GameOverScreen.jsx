@@ -23,8 +23,8 @@ const confettiConfig = {
 const GameOverScreen = ({ history, location: { state } }) => {
     const [trigger, setTrigger] = useState(false);
 
-    useEffect(() => {
-        state.logo === 'parabens' && setTimeout(() => { setTrigger(true); }, 900);   
+    useEffect(() => { 
+        state.logo === 'parabens' && setTimeout(() => { setTrigger(true); }, 900);  // eslint-disable-next-line
     }, []);
 
     return (
