@@ -47,8 +47,7 @@ class GameQuantosTem extends Component {
     }
     
     clickHandler = (e) => {
-       
-        if (this.state.current.quantity === parseInt(e.nativeEvent.path[0].innerText)) {
+        if (this.state.current.quantity === parseInt(e.target.textContent)) {
             this.setState(prevState => ({
                 score: prevState.score + 1,
                 modal: { 
