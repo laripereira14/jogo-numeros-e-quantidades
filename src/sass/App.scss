@@ -114,6 +114,8 @@ body {
     border: 1.5rem solid white;
 }
 
+// helper classes
+
 .top { 
     position: relative; 
     top: 3%;
@@ -124,10 +126,15 @@ body {
     @media (min-width: 768px) and (max-width: 992px) { top: 6% }
 }
 
-
-.ddcontainerghost{
-    pointer-events:none;
+.ml-pos {
+    @media (min-width: 320px) and (max-width: 480px) { margin-left: 6rem; } 
+    @media (min-width: 480px) and (max-width: 768px) { margin-left: 7rem; }
+    @media (min-width: 768px) and (max-width: 992px) { margin-left: 2rem; }
 }
+
+.ml-neg { @media (min-width: 320px) and (max-width: 480px) { margin-left: -5rem; } }
+
+.ddcontainerghost{ pointer-events: none; }
   
 
 /*

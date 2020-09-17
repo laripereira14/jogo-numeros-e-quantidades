@@ -18,7 +18,7 @@ export const Cart = () => {
     return (
         <div className="cart__container">
             <DropTarget key="dnd">
-                <img src={require(`../../assets/VamosAsCompras/cart.png`)} className="cart" alt="cart"/>
+                <img src={require(`../../assets/VamosAsCompras/cart.png`)} className="cart ml-pos" alt="cart"/>
             </DropTarget>
         </div>
     )   
