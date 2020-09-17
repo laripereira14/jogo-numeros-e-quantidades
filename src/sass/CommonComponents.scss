@@ -42,7 +42,7 @@
         
         @media (min-width: 320px) and (max-width: 768px) { margin: 0 .5rem; }
 
-        &:hover { animation: pulse .7s infinite; }
+        @media (hover: hover) { &:hover { animation: pulse .7s infinite; } }
     }
 
     &--timer { 
