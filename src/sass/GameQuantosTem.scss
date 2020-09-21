@@ -24,8 +24,6 @@
         align-items: center;
         justify-content: center;
 
-        &:after, &:before { display: none; }
-
         @media (min-width: 320px) and (max-width: 768px) { flex-direction: column; height: 64%; flex-basis: 65%;}
                      
     }
@@ -49,10 +47,10 @@
 
     &:nth-last-child(n+1):nth-last-child(-n+10):first-child, 
     &:nth-last-child(n+1):nth-last-child(-n+10):first-child ~ & { 
-        max-width: 12%; 
+        width: 12%; 
 
         @media (min-width: 320px) and (max-width: 480px) {
-            max-width: 29%; 
+            width: 29%; 
             margin: 0 -1rem;
         }
 
@@ -60,10 +58,10 @@
 
     &:nth-last-child(n+11):nth-last-child(-n+18):first-child, 
     &:nth-last-child(n+11):nth-last-child(-n+18):first-child ~ & { 
-        max-width: 10%;
+        width: 10%;
 
         @media (min-width: 320px) and (max-width: 480px) {
-            max-width: 22%;
+            width: 22%;
             margin: 0 -1rem;
         }
 
@@ -71,10 +69,10 @@
 
     &:nth-last-child(n+19):nth-last-child(-n+30):first-child, 
     &:nth-last-child(n+19):nth-last-child(-n+30):first-child ~ & { 
-        max-width: 7%;
+        width: 7%;
 
         @media (min-width: 320px) and (max-width: 480px) {
-            max-width: 19%;
+            width: 19%;
             margin: 0 -1rem;
         }
 
