@@ -49,10 +49,7 @@
     &:nth-last-child(n+1):nth-last-child(-n+10):first-child ~ & { 
         width: 12%; 
 
-        @media (min-width: 320px) and (max-width: 480px) {
-            width: 29%; 
-            margin: 0 -1rem;
-        }
+        @media (min-width: 320px) and (max-width: 480px) { width: 29%;}
 
     }
 
@@ -60,10 +57,7 @@
     &:nth-last-child(n+11):nth-last-child(-n+18):first-child ~ & { 
         width: 10%;
 
-        @media (min-width: 320px) and (max-width: 480px) {
-            width: 22%;
-            margin: 0 -1rem;
-        }
+        @media (min-width: 320px) and (max-width: 480px) { width: 22%; }
 
     }
 
@@ -71,10 +65,7 @@
     &:nth-last-child(n+19):nth-last-child(-n+30):first-child ~ & { 
         width: 7%;
 
-        @media (min-width: 320px) and (max-width: 480px) {
-            width: 19%;
-            margin: 0 -1rem;
-        }
+        @media (min-width: 320px) and (max-width: 480px) { width: 19%; }
 
     }
 }
