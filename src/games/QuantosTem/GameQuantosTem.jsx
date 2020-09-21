@@ -114,7 +114,7 @@ class GameQuantosTem extends Component {
                     {!modal.show ? 
                         <>
                             <img src={require("../../assets/QuantosTem/logo.png")} className="quantos-tem__logo" alt="Quantos Tem?" /> 
-                            <div className={`quantos-tem__img-container ${current.quantity >= 25 ? 'ml-neg' : ''}`}>
+                            <div className={`quantos-tem__img-container`}>
                                 {React.Children.map(imageItems, cur => cur)}
                             </div>
                             <div className="quantos-tem__numbers-container"> 

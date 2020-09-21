@@ -24,7 +24,7 @@
         align-items: center;
         justify-content: center;
 
-        @media (min-width: 320px) and (max-width: 768px) { flex-direction: column; height: 64%; width: 78%;}
+        @media (min-width: 320px) and (max-width: 768px) { flex-direction: column; height: 64%; }
                      
     }
 
@@ -43,7 +43,7 @@
 
 .image { 
     height: auto;
-    margin: 0 1.5rem;
+    margin: 0 -1px;
 
     &:nth-last-child(n+1):nth-last-child(-n+10):first-child, 
     &:nth-last-child(n+1):nth-last-child(-n+10):first-child ~ & { 
