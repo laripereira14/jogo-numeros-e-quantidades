@@ -38,7 +38,6 @@ class GameVamosAsCompras extends Component {
     }
 
     dropHandler = (e) => {
-        console.log(e.dragData === 'pão')
         const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
         if (itemMatch) {
             if (this.state.currentList[e.dragData] !== 0) {
@@ -83,11 +82,11 @@ class GameVamosAsCompras extends Component {
                         <Shelf items={items} onDrop={this.dropHandler}/>
                         <List items={currentList}/>
                         <Cart />
-                        <div className="vamos-as-compras__timer"> 
+                       {/* <div className="vamos-as-compras__timer"> 
                             <TimerCard styles="card card--timer" >
                               <Timer handleTimer={this.timerIsUpHandler}/>
                             </TimerCard>
-                        </div>
+                </div>*/}
                 </>
                     :
                 <Modal type={modal.type} message={modal.message} onStartGame={this.roundHandler}/>}
