@@ -1,29 +1,14 @@
 import React, { Component } from 'react';
-import { DragDropContainer } from 'react-drag-drop-container';
 
 import Modal from '../../components/Modal';
 import { default as TimerCard } from '../../components/Card';
-import { Cart, List, Timer } from './UIComponents';
+import { Cart, Shelf, List, Timer } from './UIComponents';
 
 import { randomize as generateRandom } from '../../helpers';
 import "../../sass/GameVamosAsCompras.scss";
 
-const Shelf = props => {
-    return (
-        <div className="shelf">
-            <div className="shelf__container">
-            {React.Children.map(props.items, cur => 
-                <DragDropContainer key="dnd" dragClone dragElemOpacity="1" onDrop={(e) => props.onDrop(e)} dragData={cur}>
-                    <img className="shelf__item" src={require(`../../assets/VamosAsCompras/${cur}.png`)} alt="shelf"/>
-                </DragDropContainer>)}
-            </div>
-        </div>
-    )
-}
-
-
 class GameVamosAsCompras extends Component {
-
+    
     state = {
         items: ['maçã', 'banana', 'cenoura', 'pão', 'leite', 'ovo', 'refri', 'biscoito', 'chocolate', 'suco'],
         currentList: {},
@@ -94,7 +79,7 @@ class GameVamosAsCompras extends Component {
                 <div className="vamos-as-compras__container">
                 {!modal.show ?
                 <>
-                        <Shelf items={items} onDrop={(e) => this.dropHandler(e)}/>
+                        <Shelf items={items} onDrop={this.dropHandler}/>
                         <List items={currentList}/>
                         <Cart />
                         <div className="vamos-as-compras__timer"> 

@@ -1,5 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { DropTarget } from 'react-drag-drop-container';
+import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+
+export const Shelf = props => {
+    return (
+        <div className="shelf">
+            <div className="shelf__container">
+            {React.Children.map(props.items, cur => 
+                <DragDropContainer key="dnd" dragClone dragElemOpacity="1" onDrop={(e) => props.onDrop(e)} dragData={cur}>
+                    <img className="shelf__item" src={require(`../../assets/VamosAsCompras/${cur}.png`)} alt="shelf"/>
+                </DragDropContainer>)}
+            </div>
+        </div>
+    )
+}
 
 export const Cart = () => {
     return (
