@@ -6,7 +6,7 @@ export const Shelf = props => {
         <div className="shelf">
             <div className="shelf__container">
             {React.Children.map(props.items, cur => 
-                <DragDropContainer key="dnd" dragClone dragElemOpacity="1" onDrop={(e) => props.onDrop(e)} dragData={cur}>
+                <DragDropContainer key="dnd" dragClone dragElemOpacity="1" onDrop={props.onDrop} dragData={cur}>
                     <img className="shelf__item" src={require(`../../assets/VamosAsCompras/${cur}.png`)} alt="shelf"/>
                 </DragDropContainer>)}
             </div>
