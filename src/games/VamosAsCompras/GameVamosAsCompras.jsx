@@ -38,6 +38,7 @@ class GameVamosAsCompras extends Component {
     }
 
     dropHandler = (e) => {
+        console.log(e);
         const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
         if (itemMatch) {
             if (this.state.currentList[e.dragData] !== 0) {
@@ -50,8 +51,7 @@ class GameVamosAsCompras extends Component {
                             state: { 
                                 'logo': 'parabens',
                                 'image': 'trofeu',
-                                'msg': 'Você fez as compras direitinho!'
-                                
+                                'msg': 'Você fez as compras direitinho!' 
                             }
                         });
                     }
@@ -69,7 +69,6 @@ class GameVamosAsCompras extends Component {
                 'logo': 'opa',
                 'image': 'time-is-up',
                 'msg': 'Poxa, o tempo acabou!'
-                
             }
         });
     }
