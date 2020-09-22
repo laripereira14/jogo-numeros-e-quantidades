@@ -6,7 +6,7 @@ export const Shelf = props => {
         <div className="shelf">
             <div className="shelf__container">
             {React.Children.map(props.items, cur => 
-                <DragDropContainer key="dnd" dragClone dragElemOpacity="1" dragData={cur}>
+                <DragDropContainer key="dnd" dragClone dragElemOpacity="1" onDrop={props.onDrop} dragData={cur}>
                     <img className="shelf__item" src={require(`../../assets/VamosAsCompras/${cur}.png`)} alt="shelf"/>
                 </DragDropContainer>)}
             </div>
@@ -14,10 +14,10 @@ export const Shelf = props => {
     )
 }
 
-export const Cart = (props) => {
+export const Cart = () => {
     return (
         <div className="cart__container">
-            <DropTarget key="dnd" onHit={props.onHit}>
+            <DropTarget key="dnd" onDragEnter={(e) => { e.stopPropagation(); e.preventDefault(); } }>
                 <img src={require(`../../assets/VamosAsCompras/cart.png`)} className="cart ml-pos" alt="cart"/>
             </DropTarget>
         </div>
