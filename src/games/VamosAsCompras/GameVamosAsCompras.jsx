@@ -38,7 +38,6 @@ class GameVamosAsCompras extends Component {
     }
 
     dropHandler = (e) => {
-        e.preventDefault();
         const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
         if (itemMatch) {
             if (this.state.currentList[e.dragData] !== 0) {
@@ -80,9 +79,9 @@ class GameVamosAsCompras extends Component {
                 <div className="vamos-as-compras__container">
                 {!modal.show ?
                 <>
-                        <Shelf items={items} onDrop={this.dropHandler}/>
+                        <Shelf items={items}/>
                         <List items={currentList}/>
-                        <Cart/>
+                        <Cart onHit={this.dropHandler}/>
                         <div className="vamos-as-compras__timer"> 
                             <TimerCard styles="card card--timer" >
                               <Timer handleTimer={this.timerIsUpHandler}/>
