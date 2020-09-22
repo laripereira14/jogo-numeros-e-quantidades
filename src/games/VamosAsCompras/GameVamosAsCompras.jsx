@@ -38,7 +38,6 @@ class GameVamosAsCompras extends Component {
     }
 
     dropHandler = (e) => {
-        console.log(e);
         const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
         if (itemMatch) {
             if (this.state.currentList[e.dragData] !== 0) {
