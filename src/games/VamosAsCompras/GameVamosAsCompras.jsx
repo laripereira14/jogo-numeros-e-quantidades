@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Modal from '../../components/Modal'; 
-
-import { Cart, Shelf, List } from './UIComponents';
+import Modal from '../../components/Modal';
+import { default as TimerCard } from '../../components/Card';
+import { Cart, Shelf, List, Timer } from './UIComponents';
 
 import { randomize as generateRandom } from '../../helpers';
 import "../../sass/GameVamosAsCompras.scss";
@@ -79,10 +79,14 @@ class GameVamosAsCompras extends Component {
                 <div className="vamos-as-compras__container">
                 {!modal.show ?
                 <>
-                        <Shelf items={items} onDrop={this.dropHandler}/>
+                        <Shelf items={items} onDrop={(e) => this.dropHandler(e)}/>
                         <List items={currentList}/>
                         <Cart />
-                       
+                        <div className="vamos-as-compras__timer"> 
+                            <TimerCard styles="card card--timer" >
+                              <Timer handleTimer={this.timerIsUpHandler}/>
+                            </TimerCard>
+                        </div>
                 </>
                     :
                 <Modal type={modal.type} message={modal.message} onStartGame={this.roundHandler}/>}
