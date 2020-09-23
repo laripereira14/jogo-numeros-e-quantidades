@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import { DragDropContainer } from 'react-drag-drop-container';
 
 export const Shelf = props => {
     return (
@@ -17,9 +17,7 @@ export const Shelf = props => {
 export const Cart = () => {
     return (
         <div className="cart__container">
-            <DropTarget key="dnd">
-                <img src={require(`../../assets/VamosAsCompras/cart.png`)} className="cart ml-pos" alt="cart"/>
-            </DropTarget>
+            <img src={require(`../../assets/VamosAsCompras/cart.png`)} className="cart ml-pos" alt="cart"/>
         </div>
     )   
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { DropTarget } from 'react-drag-drop-container';
 
 import Modal from '../../components/Modal';
 import { default as TimerCard } from '../../components/Card';
@@ -82,7 +83,7 @@ class GameVamosAsCompras extends Component {
                 <>
                         <Shelf items={items} onDrop={this.dropHandler}/>
                         <List items={currentList}/>
-                        <Cart />
+                        <DropTarget key="dnd"><Cart /></DropTarget>
                         <div className="vamos-as-compras__timer"> 
                             <TimerCard styles="card card--timer" >
                               <Timer handleTimer={this.timerIsUpHandler}/>
