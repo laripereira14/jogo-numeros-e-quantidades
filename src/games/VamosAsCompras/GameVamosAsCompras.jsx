@@ -41,11 +41,8 @@ class GameVamosAsCompras extends Component {
         const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
         if (itemMatch) {
             if (this.state.currentList[e.dragData] !== 0) {
-                this.setState(prevState => ({
-                      currentList: {...prevState.currentList, [e.dragData]: prevState.currentList[e.dragData]--}
-              }))
+              console.log('oi')
             }
-    
         }
         
     }
