@@ -41,12 +41,22 @@ class GameVamosAsCompras extends Component {
         const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
         if (itemMatch) {
             if (this.state.currentList[e.dragData] !== 0) {
-                this.setState(prevState => ({
+              this.setState(prevState => ({
                     currentList: {...prevState.currentList, [e.dragData]: prevState.currentList[e.dragData] - 1}
-                }))
-            }
-        }
-        
+            }), () => { 
+                    if (Object.values(this.state.currentList).every(v => v === 0)) {
+                        this.props.history.push({
+                            pathname: '/game-over',
+                            state: { 
+                                'logo': 'parabens',
+                                'image': 'trofeu',
+                                'msg': 'Você fez as compras direitinho!' 
+                            }
+                        });
+                    }
+                });  
+            }  
+        } 
     }
 
     timerIsUpHandler = () => {
