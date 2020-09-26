@@ -37,8 +37,9 @@ class GameVamosAsCompras extends Component {
         })
     }
 
-    dropHandler = (e) => {
-        console.log(e);
+    dropHandler = (e) => {   
+        const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
+        console.log(itemMatch);
         this.props.history.push({
             pathname: '/game-over',
             state: { 
