@@ -39,15 +39,17 @@ class GameVamosAsCompras extends Component {
 
     dropHandler = (e) => {   
         const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
-        console.log(itemMatch);
-        this.props.history.push({
-            pathname: '/game-over',
-            state: { 
-                'logo': 'parabens',
-                'image': 'trofeu',
-                'msg': 'Você fez as compras direitinho!' 
-            }
-        });
+        if (itemMatch) {
+            this.props.history.push({
+                pathname: '/game-over',
+                state: { 
+                    'logo': 'parabens',
+                    'image': 'trofeu',
+                    'msg': 'Você fez as compras direitinho!' 
+                }
+            });
+        }
+        
     }
 
     timerIsUpHandler = () => {
