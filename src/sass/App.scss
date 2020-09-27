@@ -9,9 +9,7 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-}
+html { font-size: 62.5%; }
 
 body {
     background-color: #FED811;
@@ -44,9 +42,7 @@ body {
     align-items: center;
     box-shadow: inset 0 1px 3px rgba(20, 20, 20, 0.25), 0 5px rgba(73, 72, 72, 0.08);
 
-    &--main {
-        animation: popup 1s;
-    }
+    &--main { animation: popup 1s; }
 
     &--gameover {
         padding: 2rem;
@@ -92,26 +88,23 @@ body {
 
     &__card {
         cursor: pointer;
-        width: 60vh;
+        width: 58vh;
         height: 18vh;
         border: .8rem solid #ef424e;
         border-radius: 2rem;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         
         &:hover { animation: pulse .7s infinite; }
 
-        @media (min-width: 320px) and (max-width: 768px) { width: 43vh; }
+        @media (min-width: 320px) and (max-width: 768px) { background-size: cover; width: 44vh; }
     }
 
     .card--quantos-tem { background-image: url('../assets/QuantosTem/banner.png'); }
     .card--vamos-as-compras { background-image: url('../assets/VamosAsCompras/banner.png'); }
 }
 
-.container--games {
-    display: flex;
-    border: 1.5rem solid white;
-}
+.container--games { display: flex;  border: 1.5rem solid white; }
 
 // helper classes
 
@@ -119,7 +112,6 @@ body {
     position: relative; 
     top: 3%;
     
-    @media screen and (max-width: 1440px) { top: 9% }
     @media (min-width: 320px) and (max-width: 480px) { top: 14%; }
     @media (min-width: 480px) and (max-width: 768px) { top: 15% }
     @media (min-width: 768px) and (max-width: 992px) { top: 6% }

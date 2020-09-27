@@ -22,7 +22,8 @@
 
             @media (min-width: 320px) and (max-width: 480px) { width: 100%; }
             @media (min-width: 480px) and (max-width: 768px) { width: 75%; }
-            @media (min-width: 768px) and (max-width: 1024px) { width: 56%; }
+            @media (min-width: 768px) and (max-width: 992px) { width: 70%; }
+            @media (min-width: 992px) and (max-width: 1024px) { width: 50%; }
         }
 
         &--opa {
@@ -30,7 +31,8 @@
             height: auto;
 
             @media (min-width: 320px) and (max-width: 480px) { width: 80%; }
-            @media (min-width: 480px) and (max-width: 768px) { width: 88%; }
+            @media (min-width: 480px) and (max-width: 768px) { width: 65%; }
+            @media (min-width: 768px) and (max-width: 1024px) { width: 40%; }
             
         }     
     }
@@ -40,10 +42,12 @@
         height: auto;
 
         &--time-is-up {
-            width: 20%;
+            width: 45%;
             animation: shakeLR 0.8s cubic-bezier(.36,.07,.19,.97) both;
             animation-delay: 1s;
+
             @media (min-width: 320px) and (max-width: 480px) { width: 65%;}
+            @media (min-width: 768px) and (max-width: 1024px) { width: 35%; }
         }
 
         &--medalha, &--trofeu {
@@ -51,9 +55,8 @@
 
             @media (min-width: 320px) and (max-width: 480px) { width: 45%; margin: 1rem 0 -1.5rem; }
             @media (min-width: 480px) and (max-width: 768px) { width: 33%; }
-            @media (min-width: 768px) and (max-width: 1024px) { width: 25%; }
-            @media (min-width: 1024px) and (max-width: 1440px) { width: 13%; }
-            
+            @media (min-width: 768px) and (max-width: 1024px) { width: 30%; }
+            @media (min-width: 1024px) and (max-width: 1440px) { width: 18%; }
         }
         
     }
