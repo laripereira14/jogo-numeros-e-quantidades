@@ -12,14 +12,17 @@ class GameVamosAsCompras extends Component {
     state = {
         items: ['maçã', 'banana', 'cenoura', 'pão', 'leite', 'ovo', 'refri', 'biscoito', 'chocolate', 'suco'],
         currentList: {},
-        dragged: false,
-        modal: {show: true, type: 'como-jogar', message: 'Arraste os itens da estante para o carrinho de acordo com a lista de compras. Mas seja rápido: Você só tem 45 segundos!'}
+        modal: {
+            show: true, 
+            type: 'como-jogar', 
+            message: 'Arraste os itens da estante para o carrinho de acordo com a lista de compras. Mas seja rápido: Você só tem 30 segundos!'
+        }
     }
 
     generateList = () => {
         let list = {};
         for (let i=0; i < 5; i++) {
-            const qtd = generateRandom(9) + 1;
+            const qtd = generateRandom(10) + 1;
             const item = this.state.items[generateRandom(this.state.items.length)];
             if (list.hasOwnProperty(item) || Object.values(list).includes(qtd)) {
                i--; 
@@ -37,7 +40,7 @@ class GameVamosAsCompras extends Component {
         })
     }
 
-    dropHandler = (e) => {   
+    dropHandler = (e) => {  
         const itemMatch = Object.keys(this.state.currentList).some(el => el === e.dragData);
         if (itemMatch) {
             if (this.state.currentList[e.dragData] !== 0) {

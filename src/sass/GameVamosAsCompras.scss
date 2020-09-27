@@ -85,7 +85,6 @@
         &--qtd {
             font-weight: 700;
             font-size: 3rem;  
-
             @media (min-width: 320px) and (max-width: 480px), (min-width: 768px) and (max-width: 992px) { font-size: 2.5rem; }
         }
 
@@ -98,6 +97,7 @@
        } 
 
        &--disabled { text-decoration: line-through; opacity: .5; }
+       &--animation {  animation: popup .5s; }
 
     }
 

@@ -29,7 +29,7 @@ export const List = props => {
         <div className="list__container">
             <ul className="list">
               {Object.entries(props.items).map(cur =>   
-                <li className={"list__item " + (cur[1] !== 0 ? "" : "list__item--disabled")} key={cur[0]}>
+                <li className={`list__item ${cur[1] !== 0 ? '' : 'list__item--disabled'}`} key={cur[0]}>
                     <span className="list__item--qtd"> {cur[1]} </span> 
                     <img className="list__item--img" src={require(`../../assets/VamosAsCompras/${cur[0]}.png`)} alt={cur[0]}/>    
                 </li>
@@ -40,7 +40,7 @@ export const List = props => {
 }
 
 export const Timer = props => {
-    const [seconds, setSeconds] = useState(45);
+    const [seconds, setSeconds] = useState(30);
 
     useEffect(() => {
         if (seconds === 0) { props.handleTimer() };
