@@ -46,7 +46,7 @@ export const Timer = props => {
         if (seconds === 0) { props.handleTimer() };
         const timer =
           seconds > 0 && setInterval(() => setSeconds(seconds - 1), 1000);
-        return () => clearInterval(timer);  
+        return () => clearInterval(timer);  // eslint-disable-next-line
       }, [seconds]);
 
     return <> {seconds} </>
