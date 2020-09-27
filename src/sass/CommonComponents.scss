@@ -65,7 +65,7 @@
     margin: 1rem;
 
     @media (min-width: 320px) and (max-width: 480px) { width: 92%; }
-    @media (min-width: 768px) and (max-width: 1440px) { font-size: 3rem;}
+    @media (min-width: 768px) and (max-width: 1024px) { font-size: 3rem;}
 
     &__container { position: relative; z-index: 1; }
    
