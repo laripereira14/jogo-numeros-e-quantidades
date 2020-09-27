@@ -47,7 +47,7 @@
             animation-delay: 1s;
 
             @media (min-width: 320px) and (max-width: 480px) { width: 65%;}
-            @media (min-width: 768px) and (max-width: 1024px) { width: 35%; }
+            @media (min-width: 992px) and (max-width: 1024px) { width: 35%; }
         }
 
         &--medalha, &--trofeu {
