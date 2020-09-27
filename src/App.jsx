@@ -11,6 +11,7 @@ import './sass/CommonComponents.scss';
 import './sass/Animations.scss';
 
 const App = () => {
+  window.scrollTo(0,1);
   return ( 
     <div className="app">
       <Route path="/" exact component={Menu}/>
