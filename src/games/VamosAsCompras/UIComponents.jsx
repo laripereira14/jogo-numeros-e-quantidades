@@ -47,7 +47,7 @@ export const Timer = props => {
         const timer =
           seconds > 0 && setInterval(() => setSeconds(seconds - 1), 1000);
         return () => clearInterval(timer);  
-      }, [seconds, props]);
+      }, [seconds]);
 
     return <> {seconds} </>
 }
