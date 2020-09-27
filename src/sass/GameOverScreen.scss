@@ -42,13 +42,12 @@
         height: auto;
 
         &--time-is-up {
-            width: 45%;
+            width: 20%;
             animation: shakeLR 0.8s cubic-bezier(.36,.07,.19,.97) both;
             animation-delay: 1s;
 
             @media (min-width: 320px) and (max-width: 480px) { width: 65%;}
             @media (min-width: 992px) and (max-width: 1024px) { width: 35%; }
-            @media (min-width: 1024px) and (max-width: 1440px) { width: 25%; }
         }
 
         &--medalha, &--trofeu {
